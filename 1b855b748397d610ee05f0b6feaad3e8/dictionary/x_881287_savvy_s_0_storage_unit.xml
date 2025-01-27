@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="9df593b48397d610ee05f0b6feaad388" label="Storage Unit" max_length="40" name="x_881287_savvy_s_0_storage_unit" type="collection">
+        <element label="Rack" max_length="32" name="rack" reference="x_881287_savvy_s_0_storage_rack" type="reference"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Content types" max_length="1024" name="content_types" reference="x_881287_savvy_s_0_content_types" type="glide_list"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" label="Type" mandatory="true" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Individual" sequence="1" value="Individual"/>
+                <element inactive_on_update="false" label="Container" sequence="0" value="Container"/>
+            </choice>
+        </element>
+        <element label="Location" max_length="32" name="location" reference="cmn_location" type="reference"/>
+        <element label="Last check in" max_length="255" name="last_check_in" read_only="true" type="glide_date_time"/>
+        <element label="Last check out" max_length="255" name="last_check_out" read_only="true" type="glide_date_time"/>
+        <element label="Checked out by" max_length="32" name="checked_out_by" read_only="true" reference="sys_user" type="reference"/>
+        <element choice="1" label="Availability" max_length="40" name="availability" read_only="true" type="choice">
+            <choice/>
+        </element>
+        <element label="Active" max_length="255" name="active" type="boolean"/>
+        <index name="index">
+            <element name="checked_out_by"/>
+        </index>
+        <index name="index2">
+            <element name="location"/>
+        </index>
+        <index name="index3">
+            <element name="rack"/>
+        </index>
+        <index name="index4">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>
