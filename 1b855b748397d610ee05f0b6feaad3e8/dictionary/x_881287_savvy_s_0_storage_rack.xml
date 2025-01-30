@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="6d99dfb88397d610ee05f0b6feaad3e2" label="Storage Rack" max_length="40" name="x_881287_savvy_s_0_storage_rack" type="collection">
         <element label="Retired" max_length="255" name="retired" type="boolean"/>
+        <element default="true" function_definition="true" label="Active" max_length="255" name="active" type="boolean"/>
         <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
         <element label="In Use" max_length="255" name="in_use" type="boolean"/>
         <element label="Available space" max_length="40" name="available_space" type="string"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="ee6e177083d7d610ee05f0b6feaad322" label="Storage Model" max_length="40" name="x_881287_savvy_s_0_storage_model" type="collection">
         <element label="Hardware model" max_length="32" name="hardware_model" reference="cmdb_hardware_product_model" type="reference"/>
-        <element label="Active" max_length="255" name="active" type="boolean"/>
+        <element default="true" label="Active" max_length="255" name="active" type="boolean"/>
         <element label="Available" max_length="255" name="available" type="boolean"/>
         <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
